@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Portfólio - Thiago Castro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-picture {
+            display: block;
+            max-width: 150px;
+            height: auto;
+            margin: 10px auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .skills, .goals {
+            margin-top: 20px;
+        }
+        .skills ul, .goals ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills ul li, .goals ul li {
+            background-color: #e7f7e7;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Olá, eu sou o Thiago!</h1>
+        <p>Estudante focado em acessibilidade e aprendizado independente</p>
+    </header>
+
+    <!-- Adicionando a foto -->
+    <img src="foto.jpg" alt="Foto de Thiago" class="profile-picture">
+
+    <section id="about-me">
+        <h2>Sobre mim</h2>
+        <p>
+            Sou um estudante dedicado que busca ferramentas acessíveis para acompanhar o conteúdo escolar de forma independente. Estou constantemente aprendendo para melhorar meu desempenho acadêmico e desenvolver minha autonomia.
+        </p>
+    </section>
+    <section class="skills">
+        <h2>Habilidades</h2>
+        <ul id="skills-list"></ul>
+    </section>
+    <section class="goals">
+        <h2>Metas</h2>
+        <ul id="goals-list"></ul>
+    </section>
+    <footer>
+        <p>Desenvolvido com ❤️ por Thiago</p>
+    </footer>
+    <script>
+        // Informações do portfólio
+        const skills = ["Tecnologia assistiva", "Comunicação eficaz", "Organização", "Determinação"];
+        const goals = [
+            "Participar ativamente das aulas",
+            "Melhorar o desempenho acadêmico",
+            "Desenvolver autonomia",
+            "Explorar novas ferramentas de aprendizado"
+        ];
+
+        // Função para adicionar itens à lista
+        function populateList(listId, items) {
+            const list = document.getElementById(listId);
+            items.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                list.appendChild(li);
+            });
+        }
+
+        // Preenchendo habilidades e metas
+        populateList("skills-list", skills);
+        populateList("goals-list", goals);
+    </script>
+</body>
+</html>
